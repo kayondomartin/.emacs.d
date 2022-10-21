@@ -118,7 +118,7 @@
 (use-package doom-themes)
 
 ;;Theme
-(load-theme 'doom-solarized-dark t)
+(load-theme 'doom-tokyo-night t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
