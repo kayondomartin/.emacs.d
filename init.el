@@ -15,10 +15,7 @@
 ;;Get some breathing room
 (set-fringe-mode 10)
 
-(set-face-attribute 'default nil :font "Fira Code Retina": height 280)
-
-;;Theme
-(load-theme 'doom-solarized-dark t)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
 ;; Full screen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -119,6 +116,9 @@
   ([remap describe-key] . helpful-key))
 
 (use-package doom-themes)
+
+;;Theme
+(load-theme 'doom-solarized-dark t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
