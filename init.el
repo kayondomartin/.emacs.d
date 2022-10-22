@@ -20,8 +20,11 @@
 ;; Full screen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; Key bindings
 ;;Make ESC quit prompts
 ;;(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(setq mac-option-modifier 'meta) ;sets the option key to meta in mac
+
 
 ;;Line numbers
 (column-number-mode)
@@ -116,9 +119,10 @@
   ([remap describe-key] . helpful-key))
 
 (use-package doom-themes)
-
 ;;Theme
 (load-theme 'doom-tokyo-night t)
+
+(use-package general)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -127,7 +131,7 @@
  ;; If there is more than one, they won't work right.
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(doom-themes helpful counsel ivy-rich python-mode which-key rainbow-delimiters ccls lsp-java rust-mode lsp-mode swiper command-log-mode ivy all-the-icons doom-modeline solarized-theme cmake-mode)))
+   '(general doom-themes helpful counsel ivy-rich python-mode which-key rainbow-delimiters ccls lsp-java rust-mode lsp-mode swiper command-log-mode ivy all-the-icons doom-modeline solarized-theme cmake-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
