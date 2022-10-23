@@ -1,4 +1,4 @@
-;;; doom-themes-autoloads.el --- automatically extracted autoloads
+;;; doom-themes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  0 0))
 ;;; Generated autoloads from doom-1337-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-1337-theme" '("doom-1337")))
+(register-definition-prefixes "doom-1337-theme" '("doom-1337"))
 
 ;;;***
 
@@ -18,7 +18,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-Iosvkem-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-Iosvkem-theme" '("doom-Iosvkem")))
+(register-definition-prefixes "doom-Iosvkem-theme" '("doom-Iosvkem"))
 
 ;;;***
 
@@ -26,7 +26,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-acario-dark-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-acario-dark-theme" '("doom-acario-dark")))
+(register-definition-prefixes "doom-acario-dark-theme" '("doom-acario-dark"))
 
 ;;;***
 
@@ -34,7 +34,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-acario-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-acario-light-theme" '("doom-acario-light")))
+(register-definition-prefixes "doom-acario-light-theme" '("doom-acario-light"))
 
 ;;;***
 
@@ -42,7 +42,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-ayu-dark-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-ayu-dark-theme" '("doom-ayu-dark")))
+(register-definition-prefixes "doom-ayu-dark-theme" '("doom-ayu-dark"))
 
 ;;;***
 
@@ -50,7 +50,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-ayu-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-ayu-light-theme" '("doom-ayu-light")))
+(register-definition-prefixes "doom-ayu-light-theme" '("doom-ayu-light"))
 
 ;;;***
 
@@ -58,7 +58,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-ayu-mirage-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-ayu-mirage-theme" '("doom-ayu-mirage")))
+(register-definition-prefixes "doom-ayu-mirage-theme" '("doom-ayu-mirage"))
 
 ;;;***
 
@@ -66,7 +66,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-badger-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-badger-theme" '("doom-badger")))
+(register-definition-prefixes "doom-badger-theme" '("doom-badger"))
 
 ;;;***
 
@@ -74,7 +74,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-challenger-deep-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-challenger-deep-theme" '("doom-challenger-deep")))
+(register-definition-prefixes "doom-challenger-deep-theme" '("doom-challenger-deep"))
 
 ;;;***
 
@@ -82,7 +82,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-city-lights-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-city-lights-theme" '("doom-city-lights")))
+(register-definition-prefixes "doom-city-lights-theme" '("doom-city-lights"))
 
 ;;;***
 
@@ -90,7 +90,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-dark+-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-dark+-theme" '("doom-dark+")))
+(register-definition-prefixes "doom-dark+-theme" '("doom-dark+"))
 
 ;;;***
 
@@ -98,7 +98,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-dracula-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-dracula-theme" '("doom-dracula")))
+(register-definition-prefixes "doom-dracula-theme" '("doom-dracula"))
 
 ;;;***
 
@@ -106,7 +106,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-earl-grey-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-earl-grey-theme" '("doom-earl-grey")))
+(register-definition-prefixes "doom-earl-grey-theme" '("doom-earl-grey"))
 
 ;;;***
 
@@ -114,7 +114,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-ephemeral-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-ephemeral-theme" '("doom-ephemeral")))
+(register-definition-prefixes "doom-ephemeral-theme" '("doom-ephemeral"))
 
 ;;;***
 
@@ -122,7 +122,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-fairy-floss-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-fairy-floss-theme" '("doom-fairy-floss")))
+(register-definition-prefixes "doom-fairy-floss-theme" '("doom-fairy-floss"))
 
 ;;;***
 
@@ -130,7 +130,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-flatwhite-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-flatwhite-theme" '("doom-f")))
+(register-definition-prefixes "doom-flatwhite-theme" '("doom-f"))
 
 ;;;***
 
@@ -138,7 +138,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-gruvbox-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-gruvbox-light-theme" '("doom-gruvbox-light")))
+(register-definition-prefixes "doom-gruvbox-light-theme" '("doom-gruvbox-light"))
 
 ;;;***
 
@@ -146,7 +146,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-gruvbox-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-gruvbox-theme" '("doom-gruvbox")))
+(register-definition-prefixes "doom-gruvbox-theme" '("doom-gruvbox"))
 
 ;;;***
 
@@ -154,7 +154,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-henna-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-henna-theme" '("doom-henna")))
+(register-definition-prefixes "doom-henna-theme" '("doom-henna"))
 
 ;;;***
 
@@ -162,7 +162,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-homage-black-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-homage-black-theme" '("doom-homage-black")))
+(register-definition-prefixes "doom-homage-black-theme" '("doom-homage-black"))
 
 ;;;***
 
@@ -170,7 +170,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-homage-white-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-homage-white-theme" '("doom-homage-white")))
+(register-definition-prefixes "doom-homage-white-theme" '("doom-homage-white"))
 
 ;;;***
 
@@ -178,7 +178,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-horizon-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-horizon-theme" '("doom-horizon")))
+(register-definition-prefixes "doom-horizon-theme" '("doom-horizon"))
 
 ;;;***
 
@@ -186,7 +186,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-ir-black-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-ir-black-theme" '("doom-ir-black")))
+(register-definition-prefixes "doom-ir-black-theme" '("doom-ir-black"))
 
 ;;;***
 
@@ -194,7 +194,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-lantern-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-lantern-theme" '("doom-lantern")))
+(register-definition-prefixes "doom-lantern-theme" '("doom-lantern"))
 
 ;;;***
 
@@ -202,7 +202,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-laserwave-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-laserwave-theme" '("doom-laserwave")))
+(register-definition-prefixes "doom-laserwave-theme" '("doom-laserwave"))
 
 ;;;***
 
@@ -210,7 +210,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-manegarm-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-manegarm-theme" '("doom-manegarm")))
+(register-definition-prefixes "doom-manegarm-theme" '("doom-manegarm"))
 
 ;;;***
 
@@ -218,7 +218,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-material-dark-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-material-dark-theme" '("doom-material-")))
+(register-definition-prefixes "doom-material-dark-theme" '("doom-material-"))
 
 ;;;***
 
@@ -226,7 +226,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-material-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-material-theme" '("doom-material")))
+(register-definition-prefixes "doom-material-theme" '("doom-material"))
 
 ;;;***
 
@@ -234,7 +234,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-meltbus-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-meltbus-theme" '("doom-meltbus")))
+(register-definition-prefixes "doom-meltbus-theme" '("doom-meltbus"))
 
 ;;;***
 
@@ -242,7 +242,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-miramare-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-miramare-theme" '("doom-miramare")))
+(register-definition-prefixes "doom-miramare-theme" '("doom-miramare"))
 
 ;;;***
 
@@ -250,7 +250,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-molokai-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-molokai-theme" '("doom-molokai")))
+(register-definition-prefixes "doom-molokai-theme" '("doom-molokai"))
 
 ;;;***
 
@@ -258,7 +258,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-monokai-classic-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-monokai-classic-theme" '("doom-monokai-classic")))
+(register-definition-prefixes "doom-monokai-classic-theme" '("doom-monokai-classic"))
 
 ;;;***
 
@@ -266,7 +266,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-monokai-machine-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-monokai-machine-theme" '("doom-monokai-machine")))
+(register-definition-prefixes "doom-monokai-machine-theme" '("doom-monokai-machine"))
 
 ;;;***
 
@@ -274,7 +274,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-monokai-octagon-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-monokai-octagon-theme" '("doom-monokai-octagon")))
+(register-definition-prefixes "doom-monokai-octagon-theme" '("doom-monokai-octagon"))
 
 ;;;***
 
@@ -282,7 +282,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-monokai-pro-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-monokai-pro-theme" '("doom-monokai-pro")))
+(register-definition-prefixes "doom-monokai-pro-theme" '("doom-monokai-pro"))
 
 ;;;***
 
@@ -290,7 +290,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-monokai-ristretto-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-monokai-ristretto-theme" '("doom-monokai-ristretto")))
+(register-definition-prefixes "doom-monokai-ristretto-theme" '("doom-monokai-ristretto"))
 
 ;;;***
 
@@ -298,7 +298,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-monokai-spectrum-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-monokai-spectrum-theme" '("doom-monokai-spectrum")))
+(register-definition-prefixes "doom-monokai-spectrum-theme" '("doom-monokai-spectrum"))
 
 ;;;***
 
@@ -306,7 +306,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-moonlight-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-moonlight-theme" '("doom-moonlight")))
+(register-definition-prefixes "doom-moonlight-theme" '("doom-moonlight"))
 
 ;;;***
 
@@ -314,7 +314,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-nord-aurora-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-nord-aurora-theme" '("doom-nord-aurora")))
+(register-definition-prefixes "doom-nord-aurora-theme" '("doom-nord-aurora"))
 
 ;;;***
 
@@ -322,7 +322,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-nord-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-nord-light-theme" '("doom-nord-light")))
+(register-definition-prefixes "doom-nord-light-theme" '("doom-nord-light"))
 
 ;;;***
 
@@ -330,7 +330,7 @@
 ;;;;;;  0 0))
 ;;; Generated autoloads from doom-nord-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-nord-theme" '("doom-nord")))
+(register-definition-prefixes "doom-nord-theme" '("doom-nord"))
 
 ;;;***
 
@@ -338,7 +338,7 @@
 ;;;;;;  0 0))
 ;;; Generated autoloads from doom-nova-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-nova-theme" '("doom-nova")))
+(register-definition-prefixes "doom-nova-theme" '("doom-nova"))
 
 ;;;***
 
@@ -346,7 +346,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-oceanic-next-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-oceanic-next-theme" '("doom-oceanic-next")))
+(register-definition-prefixes "doom-oceanic-next-theme" '("doom-oceanic-next"))
 
 ;;;***
 
@@ -354,7 +354,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-old-hope-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-old-hope-theme" '("doom-old-hope")))
+(register-definition-prefixes "doom-old-hope-theme" '("doom-old-hope"))
 
 ;;;***
 
@@ -362,7 +362,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-one-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-one-light-theme" '("doom-one-light")))
+(register-definition-prefixes "doom-one-light-theme" '("doom-one-light"))
 
 ;;;***
 
@@ -370,7 +370,7 @@
 ;;;;;;  0))
 ;;; Generated autoloads from doom-one-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-one-theme" '("doom-one")))
+(register-definition-prefixes "doom-one-theme" '("doom-one"))
 
 ;;;***
 
@@ -378,7 +378,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-opera-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-opera-light-theme" '("doom-opera-light")))
+(register-definition-prefixes "doom-opera-light-theme" '("doom-opera-light"))
 
 ;;;***
 
@@ -386,7 +386,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-opera-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-opera-theme" '("doom-opera")))
+(register-definition-prefixes "doom-opera-theme" '("doom-opera"))
 
 ;;;***
 
@@ -394,7 +394,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-outrun-electric-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-outrun-electric-theme" '("doom-outrun-electric")))
+(register-definition-prefixes "doom-outrun-electric-theme" '("doom-outrun-electric"))
 
 ;;;***
 
@@ -402,7 +402,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-palenight-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-palenight-theme" '("doom-palenight")))
+(register-definition-prefixes "doom-palenight-theme" '("doom-palenight"))
 
 ;;;***
 
@@ -410,7 +410,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-peacock-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-peacock-theme" '("doom-peacock")))
+(register-definition-prefixes "doom-peacock-theme" '("doom-peacock"))
 
 ;;;***
 
@@ -418,7 +418,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-plain-dark-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-plain-dark-theme" '("doom-plain-")))
+(register-definition-prefixes "doom-plain-dark-theme" '("doom-plain-"))
 
 ;;;***
 
@@ -426,7 +426,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-plain-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-plain-theme" '("doom-plain")))
+(register-definition-prefixes "doom-plain-theme" '("doom-plain"))
 
 ;;;***
 
@@ -434,7 +434,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-rouge-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-rouge-theme" '("doom-rouge")))
+(register-definition-prefixes "doom-rouge-theme" '("doom-rouge"))
 
 ;;;***
 
@@ -442,7 +442,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-shades-of-purple-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-shades-of-purple-theme" '("doom-shades-of-purple")))
+(register-definition-prefixes "doom-shades-of-purple-theme" '("doom-shades-of-purple"))
 
 ;;;***
 
@@ -450,7 +450,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-snazzy-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-snazzy-theme" '("doom-snazzy")))
+(register-definition-prefixes "doom-snazzy-theme" '("doom-snazzy"))
 
 ;;;***
 
@@ -458,7 +458,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-solarized-dark-high-contrast-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-solarized-dark-high-contrast-theme" '("doom-solarized-dark-high-contrast")))
+(register-definition-prefixes "doom-solarized-dark-high-contrast-theme" '("doom-solarized-dark-high-contrast"))
 
 ;;;***
 
@@ -466,7 +466,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-solarized-dark-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-solarized-dark-theme" '("doom-solarized-dark")))
+(register-definition-prefixes "doom-solarized-dark-theme" '("doom-solarized-dark"))
 
 ;;;***
 
@@ -474,7 +474,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-solarized-light-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-solarized-light-theme" '("doom-solarized-light")))
+(register-definition-prefixes "doom-solarized-light-theme" '("doom-solarized-light"))
 
 ;;;***
 
@@ -482,7 +482,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-sourcerer-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-sourcerer-theme" '("doom-sourcerer")))
+(register-definition-prefixes "doom-sourcerer-theme" '("doom-sourcerer"))
 
 ;;;***
 
@@ -490,7 +490,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-spacegrey-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-spacegrey-theme" '("doom-spacegrey")))
+(register-definition-prefixes "doom-spacegrey-theme" '("doom-spacegrey"))
 
 ;;;***
 
@@ -550,7 +550,7 @@ theme face specs. These is a simplified spec. For example:
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (let* ((base (file-name-directory load-file-name)) (dir (expand-file-name "themes/" base))) (add-to-list 'custom-theme-load-path (or (and (file-directory-p dir) dir) base))))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-themes" '("def-doom-theme" "doom-")))
+(register-definition-prefixes "doom-themes" '("def-doom-theme" "doom-"))
 
 ;;;***
 
@@ -558,7 +558,7 @@ theme face specs. These is a simplified spec. For example:
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-themes-base.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-themes-base" '("doom-themes-base-")))
+(register-definition-prefixes "doom-themes-base" '("doom-themes-base-"))
 
 ;;;***
 
@@ -571,7 +571,7 @@ Install doom-themes' neotree configuration.
 
 Includes an Atom-esque icon theme and highlighting based on filetype." nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-themes-ext-neotree" '("doom-")))
+(register-definition-prefixes "doom-themes-ext-neotree" '("doom-"))
 
 ;;;***
 
@@ -582,7 +582,7 @@ Includes an Atom-esque icon theme and highlighting based on filetype." nil nil)
 (autoload 'doom-themes-org-config "doom-themes-ext-org" "\
 Load `doom-themes-ext-org'." nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-themes-ext-org" '("doom-themes-")))
+(register-definition-prefixes "doom-themes-ext-org" '("doom-themes-"))
 
 ;;;***
 
@@ -595,7 +595,7 @@ Install doom-themes' treemacs configuration.
 
 Includes an Atom-esque icon theme and highlighting based on filetype." nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-themes-ext-treemacs" '("doom-themes-")))
+(register-definition-prefixes "doom-themes-ext-treemacs" '("doom-themes-"))
 
 ;;;***
 
@@ -615,7 +615,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-tokyo-night-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-tokyo-night-theme" '("doom-tokyo-night")))
+(register-definition-prefixes "doom-tokyo-night-theme" '("doom-tokyo-night"))
 
 ;;;***
 
@@ -623,7 +623,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-tomorrow-day-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-tomorrow-day-theme" '("doom-tomorrow-day")))
+(register-definition-prefixes "doom-tomorrow-day-theme" '("doom-tomorrow-day"))
 
 ;;;***
 
@@ -631,7 +631,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-tomorrow-night-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-tomorrow-night-theme" '("doom-tomorrow-night")))
+(register-definition-prefixes "doom-tomorrow-night-theme" '("doom-tomorrow-night"))
 
 ;;;***
 
@@ -639,7 +639,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-vibrant-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-vibrant-theme" '("doom-vibrant")))
+(register-definition-prefixes "doom-vibrant-theme" '("doom-vibrant"))
 
 ;;;***
 
@@ -647,7 +647,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-wilmersdorf-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-wilmersdorf-theme" '("doom-wilmersdorf")))
+(register-definition-prefixes "doom-wilmersdorf-theme" '("doom-wilmersdorf"))
 
 ;;;***
 
@@ -655,7 +655,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from doom-xcode-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-xcode-theme" '("doom-xcode")))
+(register-definition-prefixes "doom-xcode-theme" '("doom-xcode"))
 
 ;;;***
 
@@ -663,7 +663,7 @@ Enable flashing the mode-line on error." nil nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-zenburn-theme.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-zenburn-theme" '("doom-zenburn")))
+(register-definition-prefixes "doom-zenburn-theme" '("doom-zenburn"))
 
 ;;;***
 

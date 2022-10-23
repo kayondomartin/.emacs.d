@@ -20,8 +20,11 @@
 ;; Full screen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; Key bindings
 ;;Make ESC quit prompts
 ;;(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(setq mac-option-modifier 'meta) ;sets the option key to meta in mac
+
 
 ;;Line numbers
 (column-number-mode)
@@ -91,6 +94,7 @@
 ;;(add-to-list 'load-path "/home/martin/.local/share/icons-in-terminal/")
 ;;(require 'icons-in-terminal)
 
+(use-package all-the-icons)
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
@@ -116,9 +120,75 @@
   ([remap describe-key] . helpful-key))
 
 (use-package doom-themes)
-
 ;;Theme
 (load-theme 'doom-tokyo-night t)
+
+(use-package general
+  :config
+  (general-create-definer mart/leader-keys
+    :keymaps '(normal insert visual emacs)
+    :prefix "SPC"
+    :global-prefix "M-SPC")
+
+  (mart/leader-keys
+   "t"  '(:ignore t :which-key "toggles")
+   "tt" '(counsel-load-theme :which-key "choose theme")))
+
+(use-package evil
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-i-jump nil)
+  :config
+  (evil-mode 1)
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+
+  ;; Use visual line motions even outside of visual-line-mode buffers
+  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+  ;;C-z switch evil mode on and off
+
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal))
+
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init))
+
+(use-package hydra)
+
+(defhydra hydra-text-scale (:timeout 4)
+  "scale text"
+  ("j" text-scale-increase "in")
+  ("k" text-scale-decrease "out")
+  ("f" nil "finished" :exit t))
+
+(mart/leader-keys
+  "ts" '(hydra-text-scale/body :which-key "scale text"))
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  ;; NOTE: Set this to the folder where you keep your Git repos!
+  (when (file-directory-p "~/projects")
+    (setq projectile-project-search-path '("~/projects")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package counsel-projectile
+  :config (counsel-projectile-mode))
+
+(use-package magit
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+(use-package evil-magit)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -127,7 +197,7 @@
  ;; If there is more than one, they won't work right.
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(doom-themes helpful counsel ivy-rich python-mode which-key rainbow-delimiters ccls lsp-java rust-mode lsp-mode swiper command-log-mode ivy all-the-icons doom-modeline solarized-theme cmake-mode)))
+   '(hydra evil-collection evil general doom-themes helpful counsel ivy-rich python-mode which-key rainbow-delimiters ccls lsp-java rust-mode lsp-mode swiper command-log-mode ivy all-the-icons doom-modeline solarized-theme cmake-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
