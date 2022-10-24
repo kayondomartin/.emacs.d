@@ -38,7 +38,7 @@
 (set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 260)
 
 ;; Set the variable pitch face
-(set-face-attribute 'variable-pitch nil :font "Fira Code Retina" :height 295 :weight 'regular)
+(set-face-attribute 'variable-pitch nil :font "Cantarell" :height 295 :weight 'regular)
 
 ;; Package Manager Configuration -----------------------------------------------
 
