@@ -380,12 +380,95 @@
   :hook (org-mode . efs/org-mode-visual-fill))
 
 (use-package lsp-mode
+  :ensure t
+  :hook ((c-mode . lsp)
+	 (c++-mode . lsp))
   :commands (lsp-deferred)
   :init
   (setq lsp-keymap-prefix "C-c l") ;; Or 'C-l', 's-l'
   :config
-  (lsp-enable-which-key-integration t))
+  (lsp-enable-which-key-integration t)
+  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+  (setq lsp-file-watch-threshold 15000))
 
+(use-package lsp-ui
+  :ensure t
+  :commands (lsp-ui-mode)
+  :config
+  (lsp-ui-sideline-show-hover t)
+  (lsp-ui-sideline-show-diagnostics t)
+  (lsp-ui-sideline-update-mode t)
+  (setq lsp-ui-sideline-delay 3)
+  (setq lsp-ui-peek-enable t)
+  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-doc-delay 0.5)
+  (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
+  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references))
+
+(use-package lsp-ivy
+  :ensure t
+  :commands lsp-ivy-workspace-symbol)
+
+(use-package lsp-treemacs
+  :ensure t
+  :commands lsp-treemacs-errors-list)
+
+;; company
+(use-package company
+  :ensure t
+  :bind ("M-/" . company-complete-common-or-cycle) ;; overwritten by flyspell
+  :init (add-hook 'after-init-hook 'global-company-mode)
+  :config
+  (setq company-show-numbers            t
+	company-minimum-prefix-length   1
+	company-idle-delay              0.5
+	company-backends
+	'((company-files          ; files & directory
+	   company-keywords       ; keywords
+	   company-capf           ; what is this?
+	   company-yasnippet)
+	  (company-abbrev company-dabbrev))))
+
+(use-package company-box
+  :ensure t
+  :after company
+  :hook (company-mode . company-box-mode))
+
+;; flycheck
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  :config
+  (setq flycheck-display-errors-function
+	#'flycheck-display-error-messages-unless-error-list)
+
+  (setq flycheck-indication-mode nil))
+
+(use-package flycheck-pos-tip
+  :ensure t
+  :after flycheck
+  :config
+  (flycheck-pos-tip-mode))
+
+;;C/C++
+(use-package ccls
+  :ensure t
+  :hook ((c-mode c++-mode objc-mode cuda-mode) . (lambda () (require 'ccls) (lsp)))
+  :config
+  (setq ccls-executable "/usr/local/bin/ccls")
+  (setq ccls-initialization-options
+	'(:index (:comments 2) :completion (:detailedLabel t)))  
+  )
+
+;;refactoring
+(use-package srefactor
+  :ensure t
+  :config
+  (semantic-mode 1)
+  (define-key c-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
+  (define-key c++-mode-map (kbd "M-RET") 'srefactor-refactor-at-point))
+
+  
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -394,7 +477,7 @@
  '(doom-modeline-mode t)
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
+   '(srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
