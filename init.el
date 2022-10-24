@@ -183,7 +183,6 @@
   "ts" '(hydra-text-scale/body :which-key "scale text"))
 
 ;; Projectile Configuration ----------------------------------------------------
-
 (use-package projectile
   :diminish projectile-mode
   :config (projectile-mode)
@@ -192,8 +191,8 @@
   ("C-c p" . projectile-command-map)
   :init
   ;; NOTE: Set this to the folder where you keep your Git repos!
-  (when (file-directory-p "~/Projects/Code")
-    (setq projectile-project-search-path '("~/Projects/Code")))
+  (when (file-directory-p "~/projects")
+    (setq projectile-project-search-path '("~/projects")))
   (setq projectile-switch-project-action #'projectile-dired))
 
 (use-package counsel-projectile
@@ -379,13 +378,23 @@
 
 (use-package visual-fill-column
   :hook (org-mode . efs/org-mode-visual-fill))
+
+(use-package lsp-mode
+  :commands (lsp-deferred)
+  :init
+  (setq lsp-keymap-prefix "C-c l") ;; Or 'C-l', 's-l'
+  :config
+  (lsp-enable-which-key-integration t))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(doom-modeline-mode t)
+ '(ispell-dictionary nil)
  '(package-selected-packages
-   '(visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
+   '(lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
