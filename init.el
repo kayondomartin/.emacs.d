@@ -13,6 +13,7 @@
 (set-fringe-mode 10)        ; Give some breathing room
 
 (menu-bar-mode -1)            ; Disable the menu bar
+(setq-default word-wrap t) ;enable word-wrap
 
 ;; Set up the visible bell
 (setq visible-bell t)
@@ -397,15 +398,14 @@
   :ensure t
   :commands (lsp-ui-mode)
   :config
-  (lsp-ui-sideline-show-hover t)
-  (lsp-ui-sideline-show-diagnostics t)
-  (lsp-ui-sideline-update-mode t)
-  (setq lsp-ui-sideline-delay 3)
   (setq lsp-ui-peek-enable t)
   (setq lsp-ui-doc-enable nil)
   (setq lsp-ui-doc-delay 0.5)
+  (setq lsp-ui-doc-enable 1)
   (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
-  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references))
+  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
+  :custom
+  (lsp-ui-doc-position bottom))
 
 (use-package lsp-ivy
   :ensure t
@@ -493,7 +493,7 @@
  '(doom-modeline-mode t)
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(pyenv pyenv-mode elpy exec-path-from-shell better-defaults srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
+   '(pyvenv python-mode srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
