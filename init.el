@@ -1,5 +1,7 @@
+
 ;; Basic UI Configuration ------------------------------------------------------
 
+;;; Code:
 ;; You will most likely need to adjust this font size for your system!
 (defvar runemacs/default-font-size 180)
 
@@ -415,13 +417,14 @@
 
 ;; company
 (use-package company
+  :after lsp-mode
   :ensure t
   :bind ("M-/" . company-complete-common-or-cycle) ;; overwritten by flyspell
   :init (add-hook 'after-init-hook 'global-company-mode)
   :config
   (setq company-show-numbers            t
 	company-minimum-prefix-length   1
-	company-idle-delay              0.5
+	company-idle-delay              0.0
 	company-backends
 	'((company-files          ; files & directory
 	   company-keywords       ; keywords
@@ -460,6 +463,19 @@
 	'(:index (:comments 2) :completion (:detailedLabel t)))  
   )
 
+;;Python
+(use-package python-mode
+ :ensure t
+ :hook (python-mode . lsp-deferred)
+ :custom
+ (dap-python-debugger 'debugpy)
+ :config
+ (require 'dap-python))
+
+(use-package pyvenv
+ :config
+ (pyvenv-mode 1))
+
 ;;refactoring
 (use-package srefactor
   :ensure t
@@ -477,7 +493,7 @@
  '(doom-modeline-mode t)
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
+   '(pyenv pyenv-mode elpy exec-path-from-shell better-defaults srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
