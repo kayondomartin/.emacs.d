@@ -460,8 +460,17 @@
   :config
   (setq ccls-executable "/usr/local/bin/ccls")
   (setq ccls-initialization-options
-	'(:index (:comments 2) :completion (:detailedLabel t)))  
+	'(:index (:comments 2) :completion (:detailedLabel t)))
   )
+
+
+;;Rust
+(use-package rustic
+  :ensure t
+  :config
+  (require 'lsp-rust)
+  (setq lsp-rust-analyzer-completion-add-call-parenthesis nil))
+
 
 ;;Python
 (use-package python-mode
@@ -493,7 +502,7 @@
  '(doom-modeline-mode t)
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(pyvenv python-mode srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
+   '(eglot rustic pyvenv python-mode srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
