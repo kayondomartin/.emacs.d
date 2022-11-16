@@ -18,6 +18,11 @@
 ;; Set up the visible bell
 (setq visible-bell t)
 
+(setq auto-save-file-name-transforms
+      '((".*" "~/.emacs.d/auto-save-list/" t))
+      backup-directory-alist
+      '(("." . "~/.emacs.d/backups")))
+
 ;; Disable line numbers for some modes
 (dolist (mode '(org-mode-hook
                 term-mode-hook
@@ -465,12 +470,20 @@
 
 
 ;;Rust
-(use-package rustic
+(use-package rust-mode
   :ensure t
+  :hook ((rust-mode . flycheck-mode)
+	 (rust-mode . lsp-deferred))
+  :bind (("<f6>" . my/rust-format-buffer))
   :config
+  (require 'rust-rustfmt)
+  (defun my/rust-format-buffer ()
+    (interactive)
+    (rust-format-buffer)
+    (save-buffer))
   (require 'lsp-rust)
-  (setq lsp-rust-analyzer-completion-add-call-parenthesis nil))
-
+  (setq lsp-rust-analyzer-completion-add-call-parenthesis nil
+	lsp-rust-analyzer-proc-macro-enable t))
 
 ;;Python
 (use-package python-mode
