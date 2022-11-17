@@ -156,29 +156,6 @@
     "t"  '(:ignore t :which-key "toggles")
     "tt" '(counsel-load-theme :which-key "choose theme")))
 
-(use-package evil
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  (setq evil-want-C-u-scroll t)
-  (setq evil-want-C-i-jump nil)
-  :config
-  (evil-mode 1)
-  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
-  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
-
-  ;; Use visual line motions even outside of visual-line-mode buffers
-  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
-  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
-
-  (evil-set-initial-state 'messages-buffer-mode 'normal)
-  (evil-set-initial-state 'dashboard-mode 'normal))
-
-(use-package evil-collection
-  :after evil
-  :config
-  (evil-collection-init))
-
 (use-package hydra)
 
 (defhydra hydra-text-scale (:timeout 4)
@@ -470,20 +447,17 @@
 
 
 ;;Rust
-(use-package rust-mode
-  :ensure t
-  :hook ((rust-mode . flycheck-mode)
-	 (rust-mode . lsp-deferred))
-  :bind (("<f6>" . my/rust-format-buffer))
+(use-package rustic
   :config
-  (require 'rust-rustfmt)
-  (defun my/rust-format-buffer ()
-    (interactive)
-    (rust-format-buffer)
-    (save-buffer))
-  (require 'lsp-rust)
-  (setq lsp-rust-analyzer-completion-add-call-parenthesis nil
-	lsp-rust-analyzer-proc-macro-enable t))
+  (setq
+   ;; eglot seems to be the best option right now.
+   rustic-lsp-client 'eglot
+   rustic-format-on-save nil
+   ;; Prevent automatic syntax checking, which was causing lags and stutters.
+   eglot-send-changes-idle-time (* 60 60)
+   )
+  ;; Disable the annoying doc popups in the minibuffer.
+  (add-hook 'eglot-managed-mode-hook (lambda () (eldoc-mode -1))))
 
 ;;Python
 (use-package python-mode
