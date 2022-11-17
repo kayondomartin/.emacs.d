@@ -2,3 +2,9 @@ auto-save-list/*
 elpa/*
 eshell/*
 backups/*
+eln-cache/*
+forge-database.sqlite
+projectile-bookmarks.eld
+semanticdb/*
+srecode-map.el
+transient/*
