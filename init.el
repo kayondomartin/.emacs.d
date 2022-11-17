@@ -445,6 +445,12 @@
 	'(:index (:comments 2) :completion (:detailedLabel t)))
   )
 
+;;flymake-diagnostics
+(use-package flymake-diagnostic-at-point
+  :after flymake
+  :config
+  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
+
 
 ;;Rust
 (use-package rustic
@@ -489,7 +495,7 @@
  '(doom-modeline-mode t)
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(eglot rustic pyvenv python-mode srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
+   '(flymake-diagnostic-at-point eglot rustic pyvenv python-mode srefactor ccls flycheck-pos-tip lsp-ivy lsp-treemacs lsp-ui lsp-mode visual-fill-column org-bullets forge evil-magit magit counsel-projectile projectile hydra evil-collection evil general helpful counsel ivy-rich which-key rainbow-delimiters doom-themes doom-modeline all-the-icons ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
