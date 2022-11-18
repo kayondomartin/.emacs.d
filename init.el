@@ -376,6 +376,9 @@
   (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
   (setq lsp-file-watch-threshold 15000))
 
+(use-package eglot
+  :ensure t)
+
 (use-package lsp-ui
   :ensure t
   :commands (lsp-ui-mode)
@@ -446,10 +449,10 @@
   )
 
 ;;flymake-diagnostics
-(use-package flymake-diagnostic-at-point
-  :after flymake
-  :config
-  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
+;;(use-package flymake-diagnostic-at-point
+;;  :after flymake
+;;  :config
+;;  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
 
 
 ;;Rust
@@ -460,10 +463,11 @@
    rustic-lsp-client 'eglot
    rustic-format-on-save nil
    ;; Prevent automatic syntax checking, which was causing lags and stutters.
-   eglot-send-changes-idle-time (* 60 60)
+   ;;eglot-send-changes-idle-time (* 1 1)
    )
   ;; Disable the annoying doc popups in the minibuffer.
-  (add-hook 'eglot-managed-mode-hook (lambda () (eldoc-mode -1))))
+  ;;(add-hook 'eglot-managed-mode-hook (lambda () (eldoc-mode -1)))
+  )
 
 ;;Python
 (use-package python-mode
