@@ -97,8 +97,73 @@
   :config
   (setq which-key-idle-delay 1))
 
-;;(use-package doom-themes)
-;;(load-theme 'doom-acario-dark)
+(use-package general)
+
+(defun geekmacs/evil-hook ()
+  (dolist (mode '(custom-mode
+		  eshell-mode
+		  term-mode))
+    (add-to-list 'evil-emacs-state-modes mode)))
+
+(use-package evil
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-i-jump nil)
+  :hook (evil-mode . geekmacs/evil-hook)
+  :config
+  (evil-mode 1)
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+
+  ;; Use visual line motions even outside of visual-line-mode buffers
+  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal))
+(evil-mode 1)
+
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init))
+
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (when (file-directory-p "~/projects")
+    (setq projectile-project-search-path '("~/projects")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package counsel-projectile
+  :config (counsel-projectile-mode))
+
+(use-package magit
+  :commands (magit-status magit-get-current-branch)
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+(use-package forge)
+
+(defun efs/org-mode-setup ()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (auto-fill-mode 0)
+  (visual-line-mode 1)
+  (setq evil-auto-indent nil))
+
+(use-package org
+  ;;:hook (org-mode . efs/org-mode-setup)
+  :config
+  (setq org-ellipsis " >"
+	org-hide-emphasis-markers t))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -110,7 +175,7 @@
  '(ispell-dictionary nil)
  '(ivy-mode t)
  '(package-selected-packages
-   '(doom-themes rainbow-delimiters doom-modeline counsel ivy command-log-mode use-package cmake-mode)))
+   '(evil-magit magit counsel-projectile projectile evil general doom-themes rainbow-delimiters doom-modeline counsel ivy command-log-mode use-package cmake-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
